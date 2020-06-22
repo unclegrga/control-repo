@@ -1,4 +1,4 @@
-class profile::r10k: {
+class profile::r10k {
   class {'r10k':
     remote => 'https://github.com/unclegrga/control-repo',
   }
@@ -6,7 +6,7 @@ class profile::r10k: {
     use_mcollective => false,
     enable_ssl      => false,
  }
- class {'r10k:webhook':
+ class {'r10k::webhook':
   user  => 'root',
   group => 'root',
  }
